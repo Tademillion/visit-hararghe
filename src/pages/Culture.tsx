@@ -39,20 +39,21 @@ const Culture: React.FC = () => {
           <div className="grid md:grid-cols-2 gap-12 items-center mb-24">
             <div className="relative aspect-[4/3] rounded-lg overflow-hidden">
               <img
-                src="/src/assets/images/village-view.jpg"
+                src="/src/assets/images/shagoyye-3.jpg"
                 alt="Shagayyee Music"
                 className="w-full h-full object-cover"
               />
             </div>
             <div>
               <h3 className="text-3xl font-playfair font-bold mb-4">
-                Shagayyee: The Essence of Hararghe
+                Shagoyyee: The Essence of Hararghe
               </h3>
               <p className="text-gray-600 text-lg leading-relaxed">
-                Shagayyee is not just music; it's a narrative of our people's
-                history, emotions, and dreams. The intricate rhythms and soulful
-                melodies of this traditional style resonate deeply with the
-                spirit of the land.
+                A group of Hararghe men and women dancing the traditional
+                Hararghe dance, Shagooye. Shagooye is a tango-like dance where
+                men and women dance together. The women dance by dramatically
+                swaying their head from left to right with the rhythm of the
+                song and the movement from the man's hand.
               </p>
             </div>
           </div>
@@ -83,14 +84,14 @@ const Culture: React.FC = () => {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="relative aspect-[4/3] rounded-lg overflow-hidden">
               <img
-                src="/src/assets/images/dancers.jpg"
+                src="/src/assets/images/shagoyye-2.jpg"
                 alt="Traditional Dance"
                 className="w-full h-full object-cover"
               />
             </div>
             <div>
               <h3 className="text-3xl font-playfair font-bold mb-4">
-                Dance and Music: A Harmonious Duo
+                Dance and Music: Dadaysa and Shagoyye
               </h3>
               <p className="text-gray-600 text-lg leading-relaxed">
                 In Hararghe, music and dance are inseparable. Traditional dances
@@ -128,6 +129,12 @@ const Culture: React.FC = () => {
                 image: "/src/assets/images/food.jpg",
                 description:
                   "Taste the flavors of Hararghe through our traditional dishes and cooking methods.",
+              },
+              {
+                title: "Kullubbi Gabriel",
+                image: "/src/assets/images/kullubbigabriel-1.png",
+                description:
+                  "Kulubi is known for its large church, dedicated to St. Gabriel, which is built on victory of minilik warrior over muslim mosques (i.e. jibril mosque whom killed and buried 3 km from site of Church), the site is now serve massive twice-yearly pilgrimages (on 26 July and 28 December) attended by tens of thousands of Orthodox pilgrims..",
               },
             ].map((tradition, index) => (
               <div
