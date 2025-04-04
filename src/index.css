@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Inter', sans-serif;
+    scroll-behavior: smooth;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply px-6 py-2 rounded-md transition-colors duration-300;
+  }
+
+  .btn-primary {
+    @apply bg-accent text-white hover:bg-accent/90;
+  }
+
+  .input {
+    @apply mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-accent 
+    focus:ring-accent sm:text-sm px-4 py-2;
+  }
+
+  .nav-link {
+    position: relative;
+  }
+
+  .nav-link:hover span {
+    transform: scaleX(1);
+  }
+}
+
+/* Custom Styles */
+.nav-link {
+  position: relative;
+  padding-bottom: 4px;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: currentColor;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* Smooth Scroll */
+html {
+  scroll-behavior: smooth;
+} 
