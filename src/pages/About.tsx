@@ -60,7 +60,7 @@ const About: React.FC = () => {
             {/* Left Side - Image */}
             <div className="relative rounded-lg overflow-hidden">
               <img
-                src="/src/assets/images/hararghe-landscape.jpg"
+                src="/src/assets/images/land-2.jpg"
                 alt="Hararghe Landscape"
                 className="w-full aspect-[4/3] object-cover"
               />
@@ -95,11 +95,11 @@ const About: React.FC = () => {
         {/* Background Image */}
         <div className="absolute inset-0">
           <img
-            src="/src/assets/images/contact-bg.jpg"
+            src="/src/assets/images/land-3.jpg"
             alt="Hararghe Mountains"
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-black/60"></div>
+          <div className="absolute inset-0 bg-black/10"></div>
         </div>
 
         {/* Content */}
@@ -110,7 +110,7 @@ const About: React.FC = () => {
               <h2 className="text-4xl md:text-5xl font-playfair font-bold mb-6">
                 Stay Connected
               </h2>
-              <p className="text-xl text-gray-300 leading-relaxed">
+              <p className="text-xl text-black-300 leading-relaxed">
                 Join our community and be the first to know about the vibrant
                 culture, stunning landscapes, and musical rhythms of Hararghe!
               </p>
