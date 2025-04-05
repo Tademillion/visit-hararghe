@@ -76,7 +76,7 @@ const Contact: React.FC = () => {
                     id="message"
                     name="message"
                     rows={4}
-                    className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-accent 
+                    className="mt-1 block w-full rounded-md  border-gray-300 shadow-sm focus:border-accent 
                     focus:ring-accent sm:text-sm px-4 py-2"
                     placeholder="Your message"
                   ></textarea>
@@ -90,7 +90,6 @@ const Contact: React.FC = () => {
                 </button>
               </form>
             </div>
-
             {/* Contact Information */}
             <div>
               <h2 className="text-3xl font-playfair font-bold mb-8">
@@ -102,9 +101,9 @@ const Contact: React.FC = () => {
                   <div className="ml-4">
                     <h3 className="font-bold">Address</h3>
                     <p className="text-gray-600">
-                      123 Sunnyvale Rd, San Jose
+                      Ras Mekonnen Ave Meskel Square,
                       <br />
-                      California, United States
+                      Addis Ababa, Etiopia
                     </p>
                   </div>
                 </div>
@@ -112,7 +111,7 @@ const Contact: React.FC = () => {
                   <FaPhone className="w-6 h-6 text-accent mt-1" />
                   <div className="ml-4">
                     <h3 className="font-bold">Phone</h3>
-                    <p className="text-gray-600">(123) 456-7890</p>
+                    <p className="text-gray-600">(+2519) 398-47277</p>
                   </div>
                 </div>
                 <div className="flex items-start">
@@ -134,11 +133,10 @@ const Contact: React.FC = () => {
                   </div>
                 </div>
               </div>
-
               {/* Map */}
               <div className="mt-8 aspect-[4/3] rounded-lg overflow-hidden">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3172.3325395304414!2d-122.0419!3d37.3631!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzfCsDIxJzQ3LjIiTiAxMjLCsDAyJzMwLjgiVw!5e0!3m2!1sen!2sus!4v1644183265218!5m2!1sen!2sus"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3940.5828108698684!2d38.758529075295094!3d9.010479689278053!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x164b85b915db8c8b%3A0xd8577380eddaf012!2sMeskel%20Square!5e0!3m2!1sen!2set!4v1743773477409!5m2!1sen!2set"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}
@@ -153,5 +151,4 @@ const Contact: React.FC = () => {
     </div>
   );
 };
-
 export default Contact;

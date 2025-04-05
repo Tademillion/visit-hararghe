@@ -1,10 +1,44 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 const Activities: React.FC = () => {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  const heroImages = [
+    {
+      url: "/src/assets/images/beauty-2.jpg",
+      alt: "Hararghe Activities",
+    },
+    {
+      url: "/src/assets/images/qullubi.jpg",
+      alt: "Hararghe Activities",
+    },
+    {
+      url: "/src/assets/images/beauty-1.jpg",
+      alt: "Mountain Hiking",
+    },
+    {
+      url: "/src/assets/images/harar-jegol-1.jpg",
+      alt: "Cultural Tours",
+    },
+    {
+      url: "/src/assets/images/landofhararghe.jpg",
+      alt: "Photography Tours",
+    },
+  ];
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prevIndex) =>
+        prevIndex === heroImages.length - 1 ? 0 : prevIndex + 1
+      );
+    }, 5000); // Change image every 5 seconds
+
+    return () => clearInterval(interval);
+  }, []);
+
   const activities = [
     {
       title: "Mountain Hiking",
-      image: "/src/assets/images/hiking.jpg",
+      image: "/src/assets/images/land-1.PNG",
       description:
         "Embark on an exhilarating hike up GaraMuleta, where panoramic views of the stunning landscape will leave you in awe.",
       duration: "4-6 hours",
@@ -12,7 +46,7 @@ const Activities: React.FC = () => {
     },
     {
       title: "Cultural Tours",
-      image: "/src/assets/images/cultural-tour.jpg",
+      image: "/src/assets/images/dancing-1.jpg",
       description:
         "Immerse yourself in local traditions, visit historic sites, and experience the authentic lifestyle of Hararghe.",
       duration: "3-4 hours",
@@ -20,7 +54,7 @@ const Activities: React.FC = () => {
     },
     {
       title: "Photography Tours",
-      image: "/src/assets/images/photography.jpg",
+      image: "/src/assets/images/beauty-3.jpg",
       description:
         "Capture the breathtaking landscapes and cultural moments with guidance from experienced photographers.",
       duration: "4 hours",
@@ -30,15 +64,25 @@ const Activities: React.FC = () => {
 
   return (
     <div>
-      {/* Hero Section */}
-      <section className="relative h-[60vh] flex items-center justify-center">
-        <div className="absolute inset-0">
-          <img
-            src="/src/assets/images/qullubi.jpg"
-            alt="Hararghe Activities"
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-black opacity-50"></div>
+      {/* Hero Section with Carousel */}
+      <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
+        <div
+          className="absolute inset-0 flex transition-transform duration-1000 ease-in-out"
+          style={{ transform: `translateX(-${currentImageIndex * 100}%)` }}
+        >
+          {heroImages.map((image, index) => (
+            <div
+              key={index}
+              className="min-w-full h-full relative flex-shrink-0"
+            >
+              <img
+                src={image.url}
+                alt={image.alt}
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-black opacity-10"></div>
+            </div>
+          ))}
         </div>
         <div className="relative z-10 text-center text-white px-4">
           <h1 className="text-4xl md:text-6xl font-playfair font-bold mb-4">

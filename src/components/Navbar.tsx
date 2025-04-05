@@ -38,11 +38,11 @@ const Navbar: React.FC = () => {
           {/* Logo */}
           <Link
             to="/"
-            className={`text-2xl font-playfair font-bold transition-colors duration-300 ${
+            className={`text-2xl font-playfair font-bold uppercase transition-colors duration-300 ${
               isScrolled || isMenuOpen ? "text-gray-900" : "text-white"
             }`}
           >
-            Visitharaghe
+            VisitHararghe
           </Link>
 
           {/* Mobile Menu Button */}
