@@ -60,7 +60,14 @@ const Culture: React.FC = () => {
 
           {/* Instruments Section */}
           <div className="grid md:grid-cols-2 gap-12 items-center mb-24">
-            <div className="order-2 md:order-1">
+            <div className="relative aspect-[4/3] rounded-lg overflow-hidden ">
+              <img
+                src="/src/assets/images/beauty-5.jpg"
+                alt="Traditional Instruments"
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <div>
               <h3 className="text-3xl font-playfair font-bold mb-4">
                 Instruments of Heritage
               </h3>
@@ -70,13 +77,6 @@ const Culture: React.FC = () => {
                 sound, creating a rich tapestry of harmony that is both
                 captivating and culturally significant.
               </p>
-            </div>
-            <div className="relative aspect-[4/3] rounded-lg overflow-hidden order-1 md:order-2">
-              <img
-                src="/src/assets/images/musician.jpg"
-                alt="Traditional Instruments"
-                className="w-full h-full object-cover"
-              />
             </div>
           </div>
 
@@ -114,19 +114,19 @@ const Culture: React.FC = () => {
             {[
               {
                 title: "Festivals & Celebrations",
-                image: "/src/assets/images/festivals.jpg",
+                image: "/src/assets/images/marriage-1.jpg",
                 description:
                   "Experience the joy and vibrancy of our traditional festivals that mark important moments in our calendar.",
               },
               {
                 title: "Craftsmanship",
-                image: "/src/assets/images/crafts.jpg",
+                image: "/src/assets/images/beauty-4.jpg",
                 description:
                   "Discover the intricate artistry of our local craftsmen who keep ancient techniques alive.",
               },
               {
                 title: "Culinary Heritage",
-                image: "/src/assets/images/food.jpg",
+                image: "/src/assets/images/beauty-7.jpg",
                 description:
                   "Taste the flavors of Hararghe through our traditional dishes and cooking methods.",
               },
